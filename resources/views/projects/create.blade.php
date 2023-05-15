@@ -8,7 +8,7 @@
     @csrf
     Title:
     <br />
-    @error('title')
+    @error('name')
     {{ $message }}
     @enderror
     <input type="text" name="title" />
