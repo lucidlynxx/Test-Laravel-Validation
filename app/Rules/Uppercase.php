@@ -14,8 +14,11 @@ class Uppercase implements ValidationRule
     {
         if (strtoupper($value) !== $value) {
             $fail('The title does not start with an uppercased letter');
-        } else {
-            return strtoupper($value) === $value;
         }
+    }
+
+    public function passes($attribute, $value)
+    {
+        return strtoupper($value) === $value;
     }
 }
