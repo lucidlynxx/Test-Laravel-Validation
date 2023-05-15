@@ -16,9 +16,4 @@ class Uppercase implements ValidationRule
             $fail('The title does not start with an uppercased letter');
         }
     }
-
-    public function passes($attribute, $value)
-    {
-        return strtoupper($value) === $value;
-    }
 }
